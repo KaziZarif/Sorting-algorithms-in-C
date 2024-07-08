@@ -34,7 +34,7 @@ selection_sort(array, length);      // Selection sort
 bubble_sort(array, length);         // Bubble sort
 
 ```
-You can change the number of threads utilized depending on your CPU by modifying this number 
+You can change the number of threads utilized depending on your CPU by modifying this number in the header file:
 
 ```c 
 #define MAX_THREADS 4
