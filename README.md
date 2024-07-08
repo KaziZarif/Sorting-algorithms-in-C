@@ -1,4 +1,4 @@
-# Sort
+# Merge sort and other algorithms
 Some sorting algorithms I created in C
 
 Includes merge sort with multithreading
