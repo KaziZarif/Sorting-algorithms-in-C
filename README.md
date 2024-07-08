@@ -9,8 +9,6 @@ Merge sort is an efficient, stable, comparison-based sorting algorithm with a ti
 2. **Conquer**: Recursively sort each half.
 3. **Combine**: Merge the two sorted halves into a single sorted array.
 
-
-
 The conquer step can be parallelized to significantly speed up the sorting process, especially for large datasets. The parallelized version uses multiple threads to sort the subproblems concurrently.
 
 ## Features
@@ -41,6 +39,17 @@ You can change the number of threads utilized depending on your CPU by modifying
 ```c 
 #define MAX_THREADS 4
 ```
+
+If you want to use the sequential version of merge sort, comment out the parallent section in the merge_sort_recursion function 
+and uncomment the sequential part.
+
+```c
+//sequential part
+merge_sort_recursion(a, left, middle);
+merge_sort_recursion(a, middle + 1, right);
+
+```
+
 
 ## Compilation
 
