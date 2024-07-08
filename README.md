@@ -1,9 +1,15 @@
 # Sort
 Some sorting algorithms I created in C
 
-Supports merge sort, parallelized merge sort, insertion sort, selection sort and bubble sort. 
+Includes merge sort with multithreading
 
-Merge sort is an O(n log n) comparison-based sorting algorithm. It uses a divide and conquer approach to effi
+Merge sort is an efficient, stable, comparison-based sorting algorithm with a time complexity of O(n log n). It uses a divide and conquer approach to efficiently sort an array.
+
+Divide: Split the array into two halves.
+Conquer: Recursively sort each half.
+Combine: Merge the two sorted halves into a single sorted array.
+
+The conquer step can be parallelized to significantly speed up the sorting process, especially for large datasets. The parallelized version uses multiple threads to sort the subproblems concurrently.
 
 ## Features
 - Merge sort
@@ -27,7 +33,16 @@ insertion_sort(array, length);      // Insertion sort
 selection_sort(array, length);      // Selection sort
 bubble_sort(array, length);         // Bubble sort
 
+```
+You can change the number of threads depending on your CPU 
+
+```c 
+#define MAX_THREADS 4
+```
 
 ## Compilation
 
+To compile your program with the sorting functions, use the following command:
+
+```sh
 gcc -o yourProgram yourProgram.c sort.c -lpthread
