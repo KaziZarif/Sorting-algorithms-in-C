@@ -5,11 +5,11 @@ Includes merge sort with multithreading
 
 Merge sort is an efficient, stable, comparison-based sorting algorithm with a time complexity of O(n log n). It uses a divide and conquer approach to efficiently sort an array.
 
-Divide: Split the array into two halves.
+1. **Divide**: Split the array into two halves.
+2. **Conquer**: Recursively sort each half.
+3. **Combine**: Merge the two sorted halves into a single sorted array.
 
-Conquer: Recursively sort each half.
 
-Combine: Merge the two sorted halves into a single sorted array.
 
 The conquer step can be parallelized to significantly speed up the sorting process, especially for large datasets. The parallelized version uses multiple threads to sort the subproblems concurrently.
 
