@@ -40,7 +40,7 @@ You can change the number of threads utilized depending on your CPU by modifying
 #define MAX_THREADS 4
 ```
 
-If you want to use the sequential version of merge sort, comment out the parallent section in the merge_sort_recursion function 
+If you want to use the sequential version of merge sort, comment out the parallel section in the merge_sort_recursion function 
 and uncomment the sequential part.
 
 ```c
