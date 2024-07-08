@@ -5,15 +5,29 @@ Supports merge sort, parallelized merge sort, insertion sort, selection sort and
 
 Merge sort is an O(n log n) comparison-based sorting algorithm. It uses a divide and conquer approach to effi
 
-To use - 
-Include "sort.h" at the top of your program and,
+## Features
+- Merge sort
+- Parallelized merge sort
+- Insertion sort
+- Selection sort
+- Bubble sort
 
-merge_sort(array, array length);   for merge sort
-insertion_sort(array, ARRAY_SIZE);  for insertion sort
-selection_sort(array, ARRAY_SIZE); for selection sort 
+## Usage
+To use the sorting algorithms, include `sort.h` at the top of your program and call the desired sorting function:
+
+```c
+#include "sort.h"
+
+// Example usage
+int array[] = {5, 3, 8, 4, 2};
+int length = sizeof(array) / sizeof(array[0]);
+
+merge_sort(array, length);          // Merge sort
+insertion_sort(array, length);      // Insertion sort
+selection_sort(array, length);      // Selection sort
+bubble_sort(array, length);         // Bubble sort
 
 
-For sequential merge sort, comment out the parallel part in merge_sort_recursion function and uncomment the sequential part. 
+## Compilation
 
-Compiling: 
 gcc -o yourProgram yourProgram.c sort.c -lpthread
