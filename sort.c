@@ -19,6 +19,11 @@ void *merge_sort_thread(void *args);
 void merge_sort_recursion(int a[], int left, int right);
 void merge_sorted_arrays(int a[], int left, int middle, int right);
 
+void insertion_sort(int a[], int length);
+void selection_sort(int a[], int length);
+void bubble_sort(int a[], int length);
+
+
 
 //merge sort
 void merge_sort(int a[], int length) {
@@ -186,7 +191,7 @@ void selection_sort(int a[], int length) {
 void bubble_sort(int a[], int length) {
 
     for(int i = 0; i < length - 1; i++) {
-        for(int j = 0; j < length - i - i; j++) {
+        for(int j = 0; j < length - i - 1; j++) {
             if (a[j] > a[j+1]) {
                 int temp = a[j];
                 a[j] = a[j+1];
